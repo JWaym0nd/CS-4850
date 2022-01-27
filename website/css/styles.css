@@ -1,9 +1,132 @@
-.mainHeading {
-	color: red;
-	 font-family: "Comic Sans MS", "Comic Sans", cursive;
+.smart_choice-png-1 {
+	width: 308px;
+	height: 166px;
 }
-.subHeading{
-		color: teal;
-	 font-family: "Comic Sans MS", "Comic Sans", cursive;
-
+.document-1 {
+	width: 692px;
+	height: 182px;
+	background: #ffa382;
+	border-color: #ffa382;
+	border-width: 2px;
+	border-style: solid;
+}
+.how-to-start-a-food-delivery-business-png-1 {
+	width: 309px;
+	height: 187px;
+}
+.burger-webp-1 {
+	width: 291px;
+	height: 327px;
+}
+.rectangle-1 {
+	width: 645px;
+	height: 65px;
+	padding: 8px 8px 8px 8px;
+	background: #c9c9ce;
+}
+.rectangle-2 {
+	width: 524px;
+	height: 42px;
+	padding: 8px 8px 8px 8px;
+	background: #ffffff;
+}
+.plain-svg-1 {
+	width: 26px;
+	height: 22px;
+	background: #8e8e93;
+	border-color: #000000;
+	border-width: 1px;
+	border-style: solid;
+}
+.label-1 {
+	width: 328px;
+	height: 30px;
+	color: #8e8e93;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 14px;
+	text-align: left;
+}
+.label-2 {
+	width: 107px;
+	height: 35px;
+	color: #037aff;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 16px;
+	text-align: right;
+}
+.rectangle-3 {
+	width: 3px;
+	height: 32px;
+	padding: 8px 8px 8px 8px;
+	background: #0076ff;
+}
+.rectangle-4 {
+	width: 645px;
+	height: 111px;
+	padding: 8px 8px 8px 8px;
+	background: #f7f6f6;
+}
+.rectangle-5 {
+	width: 645px;
+	height: 6px;
+	padding: 8px 8px 8px 8px;
+	background: #c8c7cc;
+}
+.rectangle-6 {
+	width: 134px;
+	height: 51px;
+	padding: 8px 8px 8px 8px;
+	background: #0076ff;
+	border-color: #f7f6f6;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4px 0px 0px 4px;
+}
+.label-3 {
+	width: 134px;
+	height: 34px;
+	color: #f7f6f6;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+}
+.rectangle-7 {
+	width: 134px;
+	height: 51px;
+	padding: 8px 8px 8px 8px;
+	background: #f7f6f6;
+	border-color: #0076ff;
+	border-width: 1px;
+	border-style: solid;
+}
+.label-4 {
+	width: 134px;
+	height: 34px;
+	color: #0076ff;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+}
+.rectangle-8 {
+	width: 134px;
+	height: 51px;
+	padding: 8px 8px 8px 8px;
+	background: #f7f6f6;
+	border-color: #0076ff;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0px 4px 4px 0px;
+}
+.label-5 {
+	width: 134px;
+	height: 34px;
+	color: #0076ff;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
 }
