@@ -1,238 +1,80 @@
-.body {
+body {
 	background-color: #ffe3ae;
 }
-.smart_choice-png-1 {
+/* Below css creates our image parameters */
+img.smart_choice-png-1 {
+	display:inline-block;
 	width: 308px;
 	height: 166px;
 }
-.document-1 {
-	width: 692px;
-	height: 182px;
-	background: #ffa382;
-	border-color: #ffa382;
-	border-width: 2px;
-	border-style: solid;
-}
-.how-to-start-a-food-delivery-business-png-1 {
+img.how-to-start-a-food-delivery-business-png-1 {
+        border-radius: 50px;
 	width: 309px;
 	height: 187px;
 }
-.burger-webp-1 {
+img.burger-webp-1 {
+        border-radius: 50px;
 	width: 291px;
 	height: 327px;
 }
-.rectangle-1 {
-	width: 645px;
-	height: 65px;
-	padding: 8px 8px 8px 8px;
-	background: #c9c9ce;
+
+/* The below css creates our search bar */
+.search {
+  overflow: hidden;
+  background-color: #e9e9e9;
 }
-.rectangle-2 {
-	width: 524px;
-	height: 42px;
-	padding: 8px 8px 8px 8px;
-	background: #ffffff;
+
+.search a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-.plain-svg-1 {
-	width: 26px;
-	height: 22px;
-	background: #8e8e93;
-	border-color: #000000;
-	border-width: 1px;
-	border-style: solid;
+.search a:hover {
+  background-color: #ddd;
+  color: black;
 }
-.label-1 {
-	width: 328px;
-	height: 30px;
-	color: #8e8e93;
-	font-family: "Helvetica";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: left;
+.search a.active {
+  background-color: #2196F3;
+  color: white;
 }
-.label-2 {
-	width: 107px;
-	height: 35px;
-	color: #037aff;
-	font-family: "Helvetica";
-	font-weight: 400;
-	font-size: 16px;
-	text-align: right;
+.search input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
 }
-.rectangle-3 {
-	width: 3px;
-	height: 32px;
-	padding: 8px 8px 8px 8px;
-	background: #0076ff;
+.search .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
-.rectangle-4 {
-	width: 645px;
-	height: 111px;
-	padding: 8px 8px 8px 8px;
-	background: #f7f6f6;
+
+.search .search-container button:hover {
+  background: #ccc;
 }
-.rectangle-5 {
-	width: 645px;
-	height: 6px;
-	padding: 8px 8px 8px 8px;
-	background: #c8c7cc;
-}
-.rectangle-6 {
-	width: 134px;
-	height: 51px;
-	padding: 8px 8px 8px 8px;
-	background: #0076ff;
-	border-color: #f7f6f6;
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 4px 0px 0px 4px;
-}
-.label-3 {
-	width: 134px;
-	height: 34px;
-	color: #f7f6f6;
-	font-family: "Helvetica";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: center;
-}
-.rectangle-7 {
-	width: 134px;
-	height: 51px;
-	padding: 8px 8px 8px 8px;
-	background: #f7f6f6;
-	border-color: #0076ff;
-	border-width: 1px;
-	border-style: solid;
-}
-.label-4 {
-	width: 134px;
-	height: 34px;
-	color: #0076ff;
-	font-family: "Helvetica";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: center;
-}
-.rectangle-8 {
-	width: 134px;
-	height: 51px;
-	padding: 8px 8px 8px 8px;
-	background: #f7f6f6;
-	border-color: #0076ff;
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 0px 4px 4px 0px;
-}
-.label-5 {
-	width: 134px;
-	height: 34px;
-	color: #0076ff;
-	font-family: "Helvetica";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: center;
-}
-.rectangle-8 {
-	width: 479px;
-	height: 115px;
-	padding: 8px 8px 8px 8px;
-	box-shadow: 0px 8px 5px rgba(189, 189, 189, 0.75);
-	background: #fafafa;
-}
-.heading-5 {
-	width: 238px;
-	height: 31px;
-	color: #000000;
-	font-family: "Roboto";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: justify;
-}
-.heading-6 {
-	width: 238px;
-	height: 31px;
-	color: #000000;
-	font-family: "Roboto";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: justify;
-}
-.rectangle-6 {
-	width: 479px;
-	height: 115px;
-	padding: 8px 8px 8px 8px;
-	box-shadow: 0px 8px 5px rgba(189, 189, 189, 0.75);
-	background: #42a5f5;
-}
-.circle-2 {
-	width: 65px;
-	height: 65px;
-	background: #0d47a1;
-}
-.heading-2 {
-	width: 226px;
-	height: 36px;
-	color: #fafafa;
-	font-family: "Roboto";
-	font-weight: 400;
-	font-size: 16px;
-	text-align: justify;
-}
-.heading-1 {
-	width: 238px;
-	height: 31px;
-	color: #fafafa;
-	font-family: "Roboto";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: justify;
-}
-.plain-svg-7 {
-	width: 35px;
-	height: 33px;
-	background: #fafafa;
-}
-.download-png {
-	width: 360px;
-	height: 356px;
-}
-.c7y1rewcr36duo5sxmfu-webp {
-	width: 80px;
-	height: 79px;
-}
-.rectangle-7 {
-	width: 479px;
-	height: 115px;
-	padding: 8px 8px 8px 8px;
-	box-shadow: 0px 8px 5px rgba(189, 189, 189, 0.75);
-	background: #fafafa;
-}
-.circle-3 {
-	width: 65px;
-	height: 65px;
-	background: #9e9e9e;
-}
-.heading-4 {
-	width: 286px;
-	height: 36px;
-	color: #212121;
-	font-family: "Roboto";
-	font-weight: 400;
-	font-size: 16px;
-	text-align: justify;
-}
-.circle-1 {
-	width: 65px;
-	height: 65px;
-	background: #9e9e9e;
-}
-.heading-3 {
-	width: 286px;
-	height: 36px;
-	color: #212121;
-	font-family: "Roboto";
-	font-weight: 400;
-	font-size: 16px;
-	text-align: justify;
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .search a, .search input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .search input[type=text] {
+    border: 1px solid #ccc;
+  }
 }
