@@ -1,21 +1,26 @@
 body {
-	background-color: #ffe3ae;
+	background-color: lightsalmon;
 }
 /* Below css creates our image parameters */
 img.smart_choice-png-1 {
 	display:inline-block;
-	width: 308px;
-	height: 166px;
+	width: 200px;
+	height: 117px;
 }
 img.how-to-start-a-food-delivery-business-png-1 {
+    position: absolute;
         border-radius: 50px;
+    top: 250px;
 	width: 309px;
 	height: 187px;
 }
 img.burger-webp-1 {
+    position: absolute;
         border-radius: 50px;
 	width: 291px;
-	height: 327px;
+	height: 290px;
+	bottom: 10px;
+	right: 10px;
 }
 
 /* The below css creates our search bar */
