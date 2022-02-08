@@ -30,8 +30,7 @@ img.burger-webp-1 {
 }
 
 .search a {
-  float: left;
-  display: block;
+  float: center;
   color: black;
   text-align: center;
   padding: 14px 16px;
@@ -83,3 +82,29 @@ img.burger-webp-1 {
     border: 1px solid #ccc;
   }
 }
+
+
+
+.icon-bar {
+  width: 100px; /* Set a specific width */
+
+}
+
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
+
+
+
