@@ -1,32 +1,11 @@
 import os
 from winsound import Beep
 import zipfile
+from matplotlib.pyplot import text
 import requests
 from bs4 import BeautifulSoup
-#import requests_html
 import wget
-
-# # for Grubhub - hardcoded to Marietta, Ga
-# page = requests.get("https://bit.ly/3tEGNJM")
-# soup = BeautifulSoup(page.content, 'html.parser')
-# price_elements = soup.find_all("div", class_="u-text-secondary")
-# # for elle in price_elements:
-# #     print(elle, end="\n"*2)
-# #session = requests_html.HTMLSession()
-
-# # for DoorDash - hardcoded to Marietta, Ga
-# page1 = requests.get("https://www.doordash.com/food-delivery/marietta-ga-restaurants/")
-# soup1 = BeautifulSoup(page1.content, 'html.parser')
-# price_elements1 = soup1.find_all("div", class_="sc-EHOje fZuZOJ")
-# for elle in price_elements1:
-#     print(elle, end="\n"*2)
-
-# # placeholder
-# page2 = ""
-
-# print("Status code: " + str(page.status_code) + '\n')
-# page.content
-
+import time
 
 # #print(soup.prettify())
 
@@ -34,6 +13,12 @@ from selenium import webdriver
 url = 'https://chromedriver.storage.googleapis.com/LATEST_RELEASE'
 response = requests.get(url)
 version_number = response.text
+
+if os.path.exists('chromedriver.exe'):    
+    try:    
+        os.remove('chromedriver.exe')
+    except:
+        print("Couldn't remmove old Chromedriver")
 
 # build the donwload url
 download_url = "https://chromedriver.storage.googleapis.com/" + version_number +"/chromedriver_win32.zip"
@@ -49,5 +34,31 @@ os.remove(latest_driver_zip)
 
 driver = webdriver.Chrome(executable_path=r'C:\Users\Jairrel\Desktop\CS 4850\senior-proj\chromedriver.exe')
 driver.get("https://bit.ly/3tEGNJM")
+soup = BeautifulSoup(driver.page_source, 'html.parser')
+price_elements = soup.find_all(class_="u-text-secondary")
+for elle in price_elements:
+    print(elle, end="\n"*2)
 
-html1 = driver.page_source
+#ht = driver.find_elements_by_class_name("u-text-secondary") 
+ht = driver.find_elements_by_tag_name("div")
+#ht = driver.find_elements_by_link_text("$3.49 delivery")
+#ht = driver.find_elements_by_id("text-delivery-fee")
+#ht = driver.find_element_by_css_selector("delivery-fee-info")
+
+time.sleep(1)
+
+for elements in ht:
+    try:
+        print(elements.text)
+    except:
+        print("Can't get.")
+        
+
+
+# for element in ht:
+#     if (element.text != "Asian" or element.text != "GreeK" or element.text != "American" or element.text
+#     != "Indian" or element.text != "Dessert" or element.text != "Mexican" or element.text != "Chicken"
+#     or "Curry"):
+#         ht.pop(ht.index(element))
+
+driver.close()
