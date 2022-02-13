@@ -1,3 +1,4 @@
+
 function showLocation()
 {
 	if(document.getElementById("location").style.display == "none")
