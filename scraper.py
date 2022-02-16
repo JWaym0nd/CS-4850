@@ -25,20 +25,3 @@ if values.count(restaurant) >= 3:
 else:
     print("The restaurant you're looking for isn't on GrubHub at this time.")
 driver.close()
-
-
-for elements in ht:
-    try:
-        print(elements.text)
-    except:
-        print("Can't get.")
-        
-
-
-# for element in ht:
-#     if (element.text != "Asian" or element.text != "GreeK" or element.text != "American" or element.text
-#     != "Indian" or element.text != "Dessert" or element.text != "Mexican" or element.text != "Chicken"
-#     or "Curry"):
-#         ht.pop(ht.index(element))
-
-driver.close()
