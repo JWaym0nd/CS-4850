@@ -1,4 +1,96 @@
 body {
+    margin: 0;
+    background-color: #ffe3ae;
+}
+.search-btn {
+    width: 60%;
+    height: 48px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 40px auto;
+}
+.search
+{
+	background: #FFA074;
+	color: #000;
+	font-weight: bold;
+	border: none;
+	padding: 10px;
+	border-radius: 50px;
+}
+#zipcodeerror
+{
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+	color: #f00;
+	font-weight: bold;
+	display: inline-block;
+}
+.text-block {
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+.bg-logo {
+    height: 166px;
+    width: 337px;
+    /*margin-left: 38%;*/
+	margin: 0 auto;
+}
+.bg-logo img
+{
+	width: 100%;
+}
+.searchForm
+{
+	width: 100%;
+}
+.searchRestaurantForm
+{
+	width: 40%;
+	margin: 0 auto;
+}
+#header {
+    height: 350px;
+    width: 100%;
+	text-align: center;
+	display: inline-block;
+    /* background-image: url(../images/background_image.png);
+    background-color: rgb(245, 245, 245);
+    background-size: contain;*/
+}
+
+#feature-block {
+    /*height: 400px;*/
+    width: 100%;
+    background-color: #FFA074;
+}
+
+.feature-btn {
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.img_location {
+    height: 154px;
+    width: 154px;
+}
+.col-md-4 span
+{
+	margin-bottom: 20px;
+}
+.col-md-4:hover
+{
+	cursor: pointer;
+	border: 1px solid #999;
+	transform: scale(1.005,1.005);
+	box-shadow: 4px 4px 20px rgba(0,0,0,.1);
+}
+
+
+body {
 	background-color: lightsalmon;
 }
 /* Below css creates our image parameters */
