@@ -29,7 +29,7 @@
              <input type="text" name="item" id="item" class="search-btn" value="" placeholder="Enter the items to order">
 				<br/>
 				<input type="button" class="search" name="Search" id="Search" value="Search" onclick="getLocation()" />
-				<br/>
+				<br/ >
             </form>
 			<span id="zipcodeerror"></span>
 			<div id="latlong"></div>
