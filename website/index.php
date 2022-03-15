@@ -23,13 +23,13 @@
             <img src="files/imgs/smart_choice.png" width="337" alt="">
         </div>
         <div class="searchForm">
-            <form class="searchRestaurantForm" method="post">
+            <form class="searchRestaurantForm"  action="index-clone.php" method="post" >
                 <input type="text" name="zipcode" id="zipcode" class="search-btn" value="" placeholder="Enter your zip code">
-                <input type="text" name="restuarant" id="restuarant" class="search-btn" value="" placeholder="Enter the restuarant">
+                <input type="text" name="restaurant" id="restaurant" class="search-btn" value="" placeholder="Enter the restuarant">
              <input type="text" name="item" id="item" class="search-btn" value="" placeholder="Enter the items to order">
 				<br/>
-				<input type="button" class="search" name="Search" id="Search" value="Search" onclick="getLocation()" />
-				<br/ >
+				<input type="submit" class="search" name="Search" id="Search" value="Search" onclick="getLocation()" />
+				<br/>
             </form>
 			<span id="zipcodeerror"></span>
 			<div id="latlong"></div>
@@ -70,22 +70,7 @@
         </div>
     </div>
     </div>
-    <?php
 
-    $csvData = file_get_contents("web-order.csv");
-    $lines = explode(PHP_EOL, $csvData);
-    $array = array();
-    foreach ($lines as $line) {
-        $array[] = str_getcsv($line);
-    }
-  //  print_r($array);
-    print("\nLocation: ");
-    print_r($array[1][0]);
-    print("\nRestaurant: ");
-    print_r($array[1][1]);
-    print("\nDelivery fee: ");
-    print_r($array[1][2]);
-    ?>
 	<script src='javascript/script.js'></script>
 </body>
 
