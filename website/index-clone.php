@@ -32,7 +32,7 @@ Items:  <?php echo $_POST["item"]; ?>
 </div>
     <div class="icon-bar">
 
-        <a href="https://www.doordash.com/"><img src="files/imgs/doordash.png" align="left" width="100" height="70"></a>
+        <a href="https://www.ubereats.com/"><img src="files/imgs/ubereats.jpg" align="left" width="100" height="70"></a>
         <a href="https://www.grubhub.com/"><img src="files/imgs/grubhub.png" align="left" width="100" height="70"></a>
         <a href="https://postmates.com/"><img src="files/imgs/postmates.jpg" align="left" width="100" height="70"></a>
 
