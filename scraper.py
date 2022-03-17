@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 address = "Marietta, GA 30067"
-restaurant = "Burger King"
+restaurant = "Moes"
 values = ""
 
 # try:
@@ -18,7 +18,7 @@ values = ""
 # except:
 # print("Unable to take cmd arguments.")
 
-driver = webdriver.Chrome(executable_path=r'C:\Users\johnr\PycharmProjects\pythonProject\chromedriver.exe')
+driver = webdriver.Chrome(executable_path=r'D:\Users\Owner\PycharmProjects\pythonScraper\chromedriver.exe')
 
 driver.get("https://www.grubhub.com/")
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "input")))
