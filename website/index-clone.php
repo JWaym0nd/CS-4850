@@ -28,7 +28,6 @@ Zipcode: <?php echo $_POST["zipcode"]; ?><br>
 Restaurant: <?php echo $_POST["restaurant"]; ?><br>
 Items:  <?php echo $_POST["item"]; ?>
 
-
 </div>
     <div class="icon-bar">
 
@@ -73,12 +72,24 @@ foreach ($lines as $line) {
     $array[] = str_getcsv($line);
 }
 //  print_r($array);
-print("\nLocation: ");
-print_r($array[1][0]);
+print("\nDelivery Site: ");
+//print_r($array[1][0]);
+print_r($array[2][0]);
+print_r($array[3][0]);
+print_r($array[4][0]);
+
+
 print("\nRestaurant: ");
-print_r($array[1][1]);
+print_r($array[2][1]);
+print_r($array[3][1]);
+print_r($array[4][1]);
+
 print("\nDelivery fee: ");
-print_r($array[1][2]);
+print_r($array[2][2]);
+print_r($array[3][2]);
+print_r($array[4][2]);
+
+
 ?>
 <script src='javascript/script.js'></script>
 
