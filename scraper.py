@@ -86,9 +86,10 @@ driver.close()
 header = ['Address', 'Restaurant', 'Delivery Fee']
 data1 = [address, restaurant, found1]
 data2 = [address, restaurant, found2]
-data2 = [address, restaurant, found3]
+data3 = [address, restaurant, found3]
 with open('web-order.csv', 'w') as w:
     writer = csv.writer(w)
     writer.writerow(header)
     writer.writerow(data1)
     writer.writerow(data2)
+    writer.writerow(data3)
