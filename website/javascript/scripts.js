@@ -19,7 +19,7 @@ function showOrder()
 	else
 		document.getElementById("order").style.display = "none";
 }
-/*
+
 var x = document.getElementById("latlong");
 function getLocation() {
 	var zipcode = document.getElementById('zipcode').value;
@@ -43,4 +43,3 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
 }
-*/
