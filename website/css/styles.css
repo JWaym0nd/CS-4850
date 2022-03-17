@@ -4,7 +4,7 @@ body {
 }
 
 .search-btn {
-    width: 60%;
+   /* width: 60%;*/
     height: 48px;
     border: 1px solid grey;
     border-radius: 30px;
