@@ -15,25 +15,95 @@
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .php-output1 {
+            background-color: #FFA074;
+
+        }
+
+        .php-output2 {
+            background-color: #ffe3ae;
+            font-family: cursive;
+
+        }
+    </style>
+
 </head>
 
 <body>
 <div id="header">
     <div class="bg-logo">
-        <img src="files/imgs/smart_choice.png" width="337" alt="">
+        <img src="files/imgs/smart_choice.png" width="230" height="183" alt="">
+    </div>
+    <div class="searchForm">
+        <form class="searchRestaurantForm"  action="index-clone.php" method="post" >
+            <input type="text" name="zipcode" id="zipcode" class="search-btn" value="" placeholder="Enter your address">
+            <input type="text" name="restaurant" id="restaurant" class="search-btn" value="" placeholder="Enter the restuarant">
+            <input type="text" name="item" id="item" class="search-btn" value="" placeholder="Enter the items to order">
+            <br/>
+            <input type="submit" class="search" name="Search" id="Search" value="Search" onclick="getLocation()" />
+            <br/>
+        </form>
+        <span id="zipcodeerror"></span>
+        <div id="latlong"></div>
+    </div>
+</div>
+
+
+
+<div class="php-output1">
+    <center>
+Zipcode: <?php echo $_POST["zipcode"]; ?><br>
+</center>
+</div>
+
+
+    <div class="php-output2">
+        <center>
+    <?php
+
+    $csvData = file_get_contents("web-order.csv");
+    $lines = explode(PHP_EOL, $csvData);
+    $array = array();
+    foreach ($lines as $line) {
+        $array[] = str_getcsv($line);
+    }
+    //  print_r($array);
+    //print("\nDelivery Site: "); echo '<br/>';
+    //print_r($array[1][0]);
+    print_r($array[2][1]);  echo '<br/>';   echo '<br/>';
+
+    print_r($array[2][0]); echo '<br/>';
+    echo "Delivery Fee: ";
+    print_r($array[2][2]);  echo '<br/>';
+
+    print_r($array[3][0]); echo '<br/>';
+    echo "Delivery Fee: ";
+    print_r($array[3][2]);  echo '<br/>';
+
+    print_r($array[4][0]); echo '<br/>';
+    echo "Delivery Fee: ";
+    print_r($array[4][2]);  echo '<br/>'; echo '<br/>';
+
+    //print("\nRestaurant: "); echo '<br/>';
+
+   // print_r($array[3][1]);
+   // print_r($array[4][1]);
+
+    //print("\nDelivery fee: "); echo '<br/>';
+    ?>
+        </center>
     </div>
 
 
-Zipcode: <?php echo $_POST["zipcode"]; ?><br>
-Restaurant: <?php echo $_POST["restaurant"]; ?><br>
-Items:  <?php echo $_POST["item"]; ?>
 
 </div>
     <div class="icon-bar">
 
-        <a href="https://www.ubereats.com/"><img src="files/imgs/ubereats.jpg" align="left" width="100" height="70"></a>
-        <a href="https://www.grubhub.com/"><img src="files/imgs/grubhub.png" align="left" width="100" height="70"></a>
-        <a href="https://postmates.com/"><img src="files/imgs/postmates.jpg" align="left" width="100" height="70"></a>
+
+        <a href="https://www.grubhub.com/"><img src="files/imgs/grubhub.png" align="left" width="150" height="100"></a>
+        <a href="https://www.ubereats.com/"><img src="files/imgs/ubereats.jpg" align="left" width="150" height="100"></a>
+        <a href="https://postmates.com/"><img src="files/imgs/postmates.jpg" align="left" width="150" height="100"></a>
 
     </div>
 
@@ -63,34 +133,7 @@ Items:  <?php echo $_POST["item"]; ?>
     </div>
 </div>
 
-<?php
 
-$csvData = file_get_contents("web-order.csv");
-$lines = explode(PHP_EOL, $csvData);
-$array = array();
-foreach ($lines as $line) {
-    $array[] = str_getcsv($line);
-}
-//  print_r($array);
-print("\nDelivery Site: ");
-//print_r($array[1][0]);
-print_r($array[2][0]);
-print_r($array[3][0]);
-print_r($array[4][0]);
-
-
-print("\nRestaurant: ");
-print_r($array[2][1]);
-print_r($array[3][1]);
-print_r($array[4][1]);
-
-print("\nDelivery fee: ");
-print_r($array[2][2]);
-print_r($array[3][2]);
-print_r($array[4][2]);
-
-
-?>
 <script src='javascript/script.js'></script>
 
 </body>
