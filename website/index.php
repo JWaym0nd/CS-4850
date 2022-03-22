@@ -20,11 +20,11 @@
 <body>
     <div id="header">
         <div class="bg-logo">
-            <img src="files/imgs/smart_choice.png" width="337" alt="">
+            <img src="files/imgs/smart_choice.png" width="230" height="183" alt="">
         </div>
         <div class="searchForm">
             <form class="searchRestaurantForm"  action="index-clone.php" method="post" >
-                <input type="text" name="zipcode" id="zipcode" class="search-btn" value="" placeholder="Enter your zip code">
+                <input type="text" name="zipcode" id="zipcode" class="search-btn" value="" placeholder="Enter your address">
                 <input type="text" name="restaurant" id="restaurant" class="search-btn" value="" placeholder="Enter the restuarant">
              <input type="text" name="item" id="item" class="search-btn" value="" placeholder="Enter the items to order">
 				<br/>
@@ -39,9 +39,10 @@
 
     <div class="icon-bar">
 
-	<a href="https://www.ubereats.com/"><img src="files/imgs/ubereats.jpg" align="left" width="100" height="70"></a>
-<a href="https://www.grubhub.com/"><img src="files/imgs/grubhub.png" align="left" width="100" height="70"></a>
-		<a href="https://postmates.com/"><img src="files/imgs/postmates.jpg" align="left" width="100" height="70"></a>
+
+<a href="https://www.grubhub.com/"><img src="files/imgs/grubhub.png" align="left" width="150" height="100"></a>
+        <a href="https://www.ubereats.com/"><img src="files/imgs/ubereats.jpg" align="left" width="150" height="100"></a>
+		<a href="https://postmates.com/"><img src="files/imgs/postmates.jpg" align="left" width="150" height="100"></a>
 
 	</div>
 
