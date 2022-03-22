@@ -1,7 +1,7 @@
 import time
 import re
 import csv
-# import sys
+import sys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,89 +9,98 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 address = "Marietta, GA 30067"
-restaurant = "Moes"
+restaurant = "Burger King"
 values = ""
 
-# try:
-# restaurant = sys.argv[1]
-# address = sys.argv[2]
-# except:
-# print("Unable to take cmd arguments.")
+try:
+    restaurant = sys.argv[1]
+    address = sys.argv[2]
+except:
+    print("Unable to take cmd arguments.")
 
-driver = webdriver.Chrome(executable_path=r'D:\Users\Owner\PycharmProjects\pythonScraper\chromedriver.exe')
+driver = webdriver.Chrome(executable_path=r'C:\Users\johnr\PycharmProjects\pythonProject\chromedriver.exe')
 
-driver.get("https://www.grubhub.com/")
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "input")))
-driver.find_element(By.TAG_NAME, "input").send_keys(address)
-driver.find_element(By.TAG_NAME, "input").send_keys(Keys.ENTER)
+try:
+    driver.get("https://www.grubhub.com/")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "input")))
+    driver.find_element(By.TAG_NAME, "input").send_keys(address)
+    driver.find_element(By.TAG_NAME, "input").send_keys(Keys.ENTER)
 
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-autocomplete-input")))
-driver.find_element(By.ID, "search-autocomplete-input").send_keys(restaurant)
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-autocomplete-input")))
-driver.find_element(By.ID, "search-autocomplete-input").send_keys(Keys.ENTER)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-autocomplete-input")))
+    driver.find_element(By.ID, "search-autocomplete-input").send_keys(restaurant)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-autocomplete-input")))
+    driver.find_element(By.ID, "search-autocomplete-input").send_keys(Keys.ENTER)
 
-time.sleep(2)
-site1 = driver.find_elements(By.TAG_NAME, 'div')
-for elements in site1:
-    values = elements.text
-    print(values)
-    break
-if values.count(restaurant) >= 0:
-    found1 = re.search('\\$(.+?) delivery', values).group()
-    print(found1)
-else:
-    print("The restaurant you're looking for isn't on GrubHub at this time.")
+    time.sleep(2)
+    site1 = driver.find_elements(By.TAG_NAME, 'div')
+    for elements in site1:
+        values = elements.text
+        print(values)
+        break
+    if values.count(restaurant) >= 0:
+        found1 = re.search('\\$(.+?) delivery', values).group()
+        print(found1)
+    else:
+        print("The restaurant you're looking for isn't on GrubHub at this time.")
+finally:
+    print("GrubHub failed.")
 
-driver.get("https://www.ubereats.com/")
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "location-typeahead-home-input")))
-driver.find_element(By.ID, "location-typeahead-home-input").send_keys(address)
-WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "location-typeahead-home-menu")))
-driver.find_element(By.ID, "location-typeahead-home-input").send_keys(Keys.ENTER)
+try:
+    driver.get("https://www.ubereats.com/")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "location-typeahead-home-input")))
+    driver.find_element(By.ID, "location-typeahead-home-input").send_keys(address)
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "location-typeahead-home-menu")))
+    driver.find_element(By.ID, "location-typeahead-home-input").send_keys(Keys.ENTER)
 
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
-driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(restaurant)
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
-driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(Keys.ENTER)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
+    driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(restaurant)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
+    driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(Keys.ENTER)
 
-time.sleep(2)
-site2 = driver.find_elements(By.TAG_NAME, 'div')
-for elements in site2:
-    values = elements.text
-    print(values)
-    break
-if values.count(restaurant) >= 0:
-    found2 = re.search('\\$(.+?) Delivery Fee', values).group()
-    print(found2)
-else:
-    print("The restaurant you're looking for isn't on UberEats at this time.")
+    time.sleep(2)
+    site2 = driver.find_elements(By.TAG_NAME, 'div')
+    for elements in site2:
+        values = elements.text
+        print(values)
+        break
+    if values.count(restaurant) >= 0:
+        found2 = re.search('\\$(.+?) Delivery Fee', values).group()
+        print(found2)
+    else:
+        print("The restaurant you're looking for isn't on UberEats at this time.")
+finally:
+    print("UberEats failed.")
 
-driver.get("https://www.postmates.com/")
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "input")))
-driver.find_element(By.TAG_NAME, "input").send_keys(address)
-WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "location-typeahead-home-menu")))
-driver.find_element(By.TAG_NAME, "input").send_keys(Keys.ENTER)
+try:
+    driver.get("https://www.postmates.com/")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "input")))
+    driver.find_element(By.TAG_NAME, "input").send_keys(address)
+    WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "location-typeahead-home-menu")))
+    driver.find_element(By.TAG_NAME, "input").send_keys(Keys.ENTER)
 
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
-driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(restaurant)
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
-driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(Keys.ENTER)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
+    driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(restaurant)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
+    driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(Keys.ENTER)
 
-time.sleep(2)
-site3 = driver.find_elements(By.TAG_NAME, 'div')
-for elements in site3:
-    values = elements.text
-    print(values)
-    break
-if values.count(restaurant) >= 0:
-    found3 = re.search('\\$(.+?) Delivery Fee', values).group()
-    print(found3)
-else:
-    print("The restaurant you're looking for isn't on Postmates at this time.")
+    time.sleep(2)
+    site3 = driver.find_elements(By.TAG_NAME, 'div')
+    for elements in site3:
+        values = elements.text
+        print(values)
+        break
+    if values.count(restaurant) >= 0:
+        found3 = re.search('\\$(.+?) Delivery Fee', values).group()
+        print(found3)
+    else:
+        print("The restaurant you're looking for isn't on Postmates at this time.")
+finally:
+    print("Postmates failed.")
 
 driver.close()
 header = ['Delivery Site', 'Restaurant', 'Delivery Fee']
 data1 = ["Grubhub", restaurant, found1]
-data2 = ["Ubereats", restaurant, found2]
+data2 = ["UberEats", restaurant, found2]
 data3 = ["Postmates", restaurant, found3]
 with open('web-order.csv', 'w') as w:
     writer = csv.writer(w)
