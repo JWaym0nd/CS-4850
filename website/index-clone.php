@@ -60,38 +60,34 @@ Zipcode: <?php echo $_POST["zipcode"]; ?><br>
 
     <div class="php-output2">
         <center>
+     <div class="php-output2">
+        <center>
     <?php
+    //take in the posted values 
+    $address = "\"".$_POST['zipcode']."\"";
+    $restaurant ="\"".$_POST['restaurant']."\"";
+    //DEBUGGING CODE commented out
+    //posted values sanity check
+    //echo "posted address: $address<br>";
+    //echo "posted restaurant: $restaurant<br>";
+    //set up variables to store the output of the command
+    $output = null;
+    $retval = null;
+    $command = escapeshellcmd("python3 ../scraper.py $address $restaurant");
+    //echo "<br>Command executed: $command <br> ";      
+    exec($command,$output,$retval);
+    //echo "<br>Returned with: $retval<br> ";
+    //echo var_dump($output); 
 
-    $csvData = file_get_contents("web-order.csv");
-    $lines = explode(PHP_EOL, $csvData);
-    $array = array();
-    foreach ($lines as $line) {
-        $array[] = str_getcsv($line);
-    }
-    //  print_r($array);
-    //print("\nDelivery Site: "); echo '<br/>';
-    //print_r($array[1][0]);
-    print_r($array[2][1]);  echo '<br/>';   echo '<br/>';
 
-    print_r($array[2][0]); echo '<br/>';
-    echo "Delivery Fee: ";
-    print_r($array[2][2]);  echo '<br/>';
 
-    print_r($array[3][0]); echo '<br/>';
-    echo "Delivery Fee: ";
-    print_r($array[3][2]);  echo '<br/>';
+    echo"<h2>$output[0]:$output[1]</h2>";
+    echo"<h2>$output[2]:$output[3]</h2>";
+    echo"<h2>$output[4]:$output[5]</h2>";
 
-    print_r($array[4][0]); echo '<br/>';
-    echo "Delivery Fee: ";
-    print_r($array[4][2]);  echo '<br/>'; echo '<br/>';
 
-    //print("\nRestaurant: "); echo '<br/>';
-
-   // print_r($array[3][1]);
-   // print_r($array[4][1]);
-
-    //print("\nDelivery fee: "); echo '<br/>';
     ?>
+
         </center>
     </div>
 
