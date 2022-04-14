@@ -60,7 +60,7 @@ else:
 
 driver.get("https://www.ubereats.com/")
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "location-typeahead-home-input")))
-
+driver.find_element(By.ID, "location-typeahead-home-input").send_keys(address)
 WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "location-typeahead-home-menu")))
 driver.find_element(By.ID, "location-typeahead-home-input").send_keys(Keys.ENTER)
 
