@@ -15,62 +15,82 @@
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+    body {
+        background-image: url('files/imgs/pasta.jpg'), url('files/imgs/Burger.jpg'), url('files/imgs/pizza.jpg');
+        background-attachment: fixed, fixed, fixed;
+        background-position: left, center, right ;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+
+
+    }
+</style>
 </head>
 
+
+
 <body>
-    <div id="header">
-        <div class="bg-logo">
-            <img src="files/imgs/smart_choice.png" width="230" height="183" alt="">
-        </div>
-        <div class="searchForm">
-            <form class="searchRestaurantForm"  action="index-clone.php" method="post" >
-                <input type="text" name="zipcode" id="zipcode" class="search-btn" value="" placeholder="Enter your address">
-                <input type="text" name="restaurant" id="restaurant" class="search-btn" value="" placeholder="Enter the restuarant">
-             <input type="text" name="item" id="item" class="search-btn" value="" placeholder="Enter the items to order">
-				<br/>
-				<input type="submit" class="search" name="Search" id="Search" value="Search" onclick="getLocation()" />
-				<br/>
-            </form>
-			<span id="zipcodeerror"></span>
-			<div id="latlong"></div>
-        </div>
-    </div>
 
 
+<div>
+
+
+<div class="title">
+    SMART CHOICE
+</div>
+<br><br><br><br>
+<div class="description1">
+    &nbsp;&nbsp;&nbsp;&nbsp;Our product is a website which extensively compares and analyzes food delivery fees from the top 3 online
+    food websites which are GrubHub, UberEats, and Postmates and &nbsp;&nbsp;&nbsp;&nbsp;gives the best option for customers for their
+    satisfaction.
+
+</div>
+<br><br><br><br>
+<div class="description2">
+    This encapsulates the idea of the Internet of Things in smart retail because we are building a technology
+    service that helps users get the best food delivery deals in a trillion dollar industry by
+    improving user experience as well as saving time, energy, and costs in this busy world.<br>
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!--
     <div class="icon-bar">
 
 
-<a href="https://www.grubhub.com/"><img src="files/imgs/grubhub.png" align="left" width="150" height="100"></a>
+        <a href="https://www.grubhub.com/"><img src="files/imgs/grubhub.png" align="left" width="150" height="100"></a>
         <a href="https://www.ubereats.com/"><img src="files/imgs/ubereats.jpg" align="left" width="150" height="100"></a>
-		<a href="https://postmates.com/"><img src="files/imgs/postmates.jpg" align="left" width="150" height="100"></a>
+        <a href="https://postmates.com/"><img src="files/imgs/postmates--.png" align="left" width="150" height="100"></a>
 
-	</div>
+    </div>
+    -->
+
+    <div class="part2">
+
+        <div class="bg-logo">
+            <img src="files/imgs/smart_choice.png" width="230" height="183" alt="">
+        </div>
 
 
+        <div id="header">
 
-    <div id="feature-block">
-        <div class="row feature-btn">
-            <div class="col-md-4" onclick="showLocation()">
-                <img class="img_location" src="files/imgs/location.png" alt="">
-                <h2>Your Location</h2>
-                <p>Select your location to find best prices</p>
-				<span id="location" style="display: none;">New York, NYC, USA</span>
-            </div>
-            <div class="col-md-4" onclick="showRestaurant()">
-                <img src="files/imgs/Storefront.png" alt="">
-                <h2>Restaurant</h2>
-                <p>Search and choose from our wide range of Restaurants</p>
-				<span id="restaurant" style="display: none;">Available Restaurants are Crown Shy, Atoboy</span>
-            </div>
-            <div class="col-md-4" onclick="showOrder()">
-                <img src="files/imgs/order.png" style="width: 154px; height: 154px;" alt="">
-                <h2>Order</h2>
-                <p>Make an order now!</p>
-				<span id="order" style="display: none;">Order Online for Home Delivery</span>
+            <div class="searchForm">
+                <form class="searchRestaurantForm"  action="index-clone.php" method="post" >
+                    <input type="text" name="zipcode" id="zipcode" class="search-btn" value="" placeholder="Enter your address">
+                    <input type="text" name="restaurant" id="restaurant" class="search-btn" value="" placeholder="Enter the restuarant">
+                    <input type="text" name="item" id="item" class="search-btn" value="" placeholder="Enter the items to order">
+                    <br/>
+                    <input type="submit" class="search" name="Search" id="Search" value="Search" onclick="getLocation()" />
+                    <br/>
+                </form>
+                <span id="zipcodeerror"></span>
+                <div id="latlong"></div>
             </div>
         </div>
-    </div>
-    </div>
+        
 
 	<script src='javascript/script.js'></script>
 </body>
