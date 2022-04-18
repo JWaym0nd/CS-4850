@@ -33,6 +33,7 @@
 
     
    <body>
+   <div id="preloader"></div>
 
 
 </div>
@@ -89,6 +90,8 @@
         <span id="zipcodeerror"></span>
         <div id="latlong"></div>
     </div>
+
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/JNl1_hRwpXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
  
     
@@ -151,6 +154,13 @@ Zipcode: <?php echo $_POST["zipcode"]; ?><br>
 
 
 <script src='javascript/script.js'></script>
+
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function() {
+        loader.style.display = "none";
+    })
+</script>
 
 </body>
 </html>
