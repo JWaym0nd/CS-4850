@@ -47,6 +47,7 @@ def grub_hub():
     if values.count(restaurant) >= 0:
         try:
             found = re.search('\\$(.+?) delivery', values).group()
+            wait = re.search('(.+?) mins', values).group()
         except:
             found = "Unavailable"
     else:
@@ -54,6 +55,7 @@ def grub_hub():
     driver.close()
     print("Grubhub")
     print(found)
+    print(wait)
 
 
 def uber_eats():
@@ -83,6 +85,7 @@ def uber_eats():
     if values.count(restaurant) >= 0:
         try:
             found = re.search('\\$(.+?) Delivery Fee', values).group()
+            wait = re.search('(.+?) min', values).group()
         except:
             found = "Unavailable"
     else:
@@ -90,6 +93,7 @@ def uber_eats():
     driver.close()
     print("Uber Eats")
     print(found)
+    print(wait)
 
 
 def post_mates():
@@ -118,6 +122,7 @@ def post_mates():
     if values.count(restaurant) >= 0:
         try:
             found = re.search('\\$(.+?) Delivery Fee', values).group()
+            wait = re.search('(.+?) min', values).group()
         except:
             found = "Unavailable"
     else:
@@ -125,6 +130,7 @@ def post_mates():
     driver.close()
     print("Postmates")
     print(found)
+    print(wait)
 
 
 def main():
