@@ -1,6 +1,6 @@
 .title {
-    background-color: #FFA074;
-    color: darkred;
+    background-color: hsl(33, 100%, 73%);
+    color: #008b8969;
     border-radius: 50px;
     text-align: center;
     width: 20%;
@@ -10,19 +10,31 @@
 }
 
 .description1 {
-    background-color: #FFA074;
-    color: darkred;
-    border-radius: 70px;
-    width: 70%;
+    background-color: hsl(33, 100%, 73%);
+    color: hwb(121 0% 46% / 0.953);
+    border-radius: 90px;
+    width: 65%;
     margin: auto;
+    padding: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .description2 {
-    background-color: #FFA074;
-    color: darkred;
-    border-radius: 50px;
-    width: 70%;
+    background-color: hsl(33, 100%, 73%);
+    color: hwb(121 0% 46% / 0.953);
+    border-radius: 90px;
+    width: 65%;
     margin: auto;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.spacing {
+    margin-top: 120px;
+}
+
+.double_spacing {
+    margin-bottom: 190px;
 }
 
 #header {
@@ -146,6 +158,7 @@ body {
     margin: 0 auto;
 }
 
+
 #header {
     height: 350px;
     width: 100%;
@@ -254,7 +267,7 @@ img.search-png-1 {
 
 .search {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: #FFA074;
 }
 
 .search a {

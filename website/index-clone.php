@@ -18,12 +18,11 @@
      <style>
 
         body {
-            background-image: url('files/imgs/pasta.jpg'), url('files/imgs/Burger.jpg'), url('files/imgs/pizza.jpg');
-            background-attachment: fixed, fixed, fixed;
-            background-position: left, center, right ;
-            background-repeat: no-repeat, no-repeat, no-repeat;
-
-
+            background-image: url('files/imgs/bg.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 1500px 1000px;
         }
     </style>
 
@@ -41,21 +40,21 @@
 <div class="title">
     SMART CHOICE
 </div>
-<br><br><br><br>
+<div class="spacing"></div>
 <div class="description1">
     &nbsp;&nbsp;&nbsp;&nbsp;Our product is a website which extensively compares and analyzes food delivery fees from the top 3 online
     food websites which are GrubHub, UberEats, and Postmates and &nbsp;&nbsp;&nbsp;&nbsp;gives the best option for customers for their
     satisfaction.
 
 </div>
-<br><br><br><br>
+<div class="spacing"></div>
 <div class="description2">
     This encapsulates the idea of the Internet of Things in smart retail because we are building a technology
     service that helps users get the best food delivery deals in a trillion dollar industry by
     improving user experience as well as saving time, energy, and costs in this busy world.<br>
 
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="double_spacing"></div>
 
 <!--
 <div class="icon-bar">
