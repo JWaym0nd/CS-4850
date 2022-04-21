@@ -46,7 +46,7 @@ def grub_hub():
         break
     if values.find(restaurant) >= 2:
         try:
-            found = re.search('\\$(.+?) delivery', values).group()
+            found = re.search('\\$(.+?) delivery', values).group(1)
         except:
             found = "Unavailable"
         try:
@@ -88,7 +88,7 @@ def uber_eats():
         break
     if values.find("Results for ") == -1:
         try:
-            found = re.search('\\$(.+?) Delivery Fee', values).group()
+            found = re.search('\\$(.+?) Delivery Fee', values).group(1)
         except:
             found = "Unavailable"
         try:
@@ -129,7 +129,7 @@ def post_mates():
         break
     if values.find("Results for ") == -1:
         try:
-            found = re.search('\\$(.+?) Delivery Fee', values).group()
+            found = re.search('\\$(.+?) Delivery Fee', values).group(1)
         except:
             found = "Unavailable"
         try:
