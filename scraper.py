@@ -13,7 +13,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 address = "Marietta, GA 30067"
-restaurant = "Burger King"
+restaurant = "Racetrac"
 try:
     address = sys.argv[1]
     restaurant = sys.argv[2]
@@ -39,19 +39,23 @@ def grub_hub():
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-autocomplete-input")))
     driver.find_element(By.ID, "search-autocomplete-input").send_keys(Keys.ENTER)
 
-    time.sleep(3)
+    time.sleep(3.5)
     site1 = driver.find_elements(By.TAG_NAME, 'div')
     for elements in site1:
         values = elements.text
         break
-    if values.count(restaurant) >= 0:
+    if values.count(restaurant) >= 4:
         try:
             found = re.search('\\$(.+?) delivery', values).group()
-            wait = re.search('(.+?) mins', values).group()
         except:
             found = "Unavailable"
+        try:
+            wait = re.search('(.+?) mins', values).group()
+        except:
+            wait = "Unavailable"
     else:
         found = "The restaurant you're looking for isn't on GrubHub at this time."
+        wait = "Try another restaurant."
     driver.close()
     print("Grubhub")
     print(found)
@@ -77,19 +81,23 @@ def uber_eats():
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
     driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(Keys.ENTER)
 
-    time.sleep(3)
+    time.sleep(3.5)
     site2 = driver.find_elements(By.TAG_NAME, 'div')
     for elements in site2:
         values = elements.text
         break
-    if values.count(restaurant) >= 0:
+    if values.count(restaurant) >= 4:
         try:
             found = re.search('\\$(.+?) Delivery Fee', values).group()
-            wait = re.search('(.+?) min', values).group()
         except:
             found = "Unavailable"
+        try:
+            wait = re.search('(.+?) min', values).group()
+        except:
+            wait = "Unavailable"
     else:
         found = "The restaurant you're looking for isn't on UberEats at this time."
+        wait = "Try another restaurant."
     driver.close()
     print("Uber Eats")
     print(found)
@@ -114,19 +122,23 @@ def post_mates():
     driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(restaurant)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search-suggestions-typeahead-input")))
     driver.find_element(By.ID, "search-suggestions-typeahead-input").send_keys(Keys.ENTER)
-    time.sleep(3)
+    time.sleep(3.5)
     site3 = driver.find_elements(By.TAG_NAME, 'div')
     for elements in site3:
         values = elements.text
         break
-    if values.count(restaurant) >= 0:
+    if values.count(restaurant) >= 4:
         try:
             found = re.search('\\$(.+?) Delivery Fee', values).group()
-            wait = re.search('(.+?) min', values).group()
         except:
             found = "Unavailable"
+        try:
+            wait = re.search('(.+?) min', values).group()
+        except:
+            wait = "Unavailable"
     else:
         found = "The restaurant you're looking for isn't on Postmates at this time."
+        wait = "Try another restaurant."
     driver.close()
     print("Postmates")
     print(found)
