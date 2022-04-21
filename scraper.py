@@ -13,7 +13,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 address = "Marietta, GA 30067"
-restaurant = "Racetrac"
+restaurant = "Pizza Hut"
 try:
     address = sys.argv[1]
     restaurant = sys.argv[2]
@@ -44,7 +44,7 @@ def grub_hub():
     for elements in site1:
         values = elements.text
         break
-    if values.count(restaurant) >= 4:
+    if values.find(restaurant) >= 2:
         try:
             found = re.search('\\$(.+?) delivery', values).group()
         except:
@@ -86,7 +86,7 @@ def uber_eats():
     for elements in site2:
         values = elements.text
         break
-    if values.count(restaurant) >= 4:
+    if values.find("Results for ") == -1:
         try:
             found = re.search('\\$(.+?) Delivery Fee', values).group()
         except:
@@ -127,7 +127,7 @@ def post_mates():
     for elements in site3:
         values = elements.text
         break
-    if values.count(restaurant) >= 4:
+    if values.find("Results for ") == -1:
         try:
             found = re.search('\\$(.+?) Delivery Fee', values).group()
         except:
